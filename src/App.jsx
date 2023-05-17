@@ -1,4 +1,4 @@
-import {Produtos} from ./components/Produtos
+import { Produtos } from './components/Produtos'
 
 const produtos = [
   {
@@ -23,15 +23,24 @@ const produtos = [
   },
 ];
 
-function App() {
+export function App() {
   return (
     <div>
-      {}
       <h1>Produtos</h1>
-
-      
+      <ul>
+        {
+          produtos.map(produto => {
+            return(
+              <Produtos 
+                key={produto.nome}
+                name = {produto.nome}
+                image = {produto.image}
+                price = {produto.preco}
+              />
+            )
+          })
+        }
+      </ul>
     </div>
   );
 }
-
-export default App;
