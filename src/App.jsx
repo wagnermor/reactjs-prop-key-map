@@ -1,4 +1,5 @@
 import { Produtos } from './components/Produtos'
+import './App.css'
 
 const produtos = [
   {
@@ -27,7 +28,7 @@ export function App() {
   return (
     <div>
       <h1>Produtos</h1>
-      <ul>
+      <ul className='wrapper'>
         {
           produtos.map(produto => {
             return(
